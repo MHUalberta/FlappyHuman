@@ -7,19 +7,19 @@ public class SoundEffectsPlayer : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1, sfx2, sfx3;
 
-    public void Button1()
+    public void Start()
     {
         src.clip = sfx1;
         src.Play();
     }
 
-    public void Button2()
+    public void Jump()
     {
         src.clip = sfx2;
         src.Play();
     }
 
-    public void Button3()
+    public void EnterHole()
     {
         src.clip = sfx3;
         src.Play();
