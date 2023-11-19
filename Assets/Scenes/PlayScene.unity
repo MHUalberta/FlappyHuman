@@ -497,25 +497,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &135014991
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1681694028}
-  - component: {fileID: 1681694031}
-  - component: {fileID: 1681694030}
-  - component: {fileID: 1681694029}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &401370491
 GameObject:
   m_ObjectHideFlags: 0
