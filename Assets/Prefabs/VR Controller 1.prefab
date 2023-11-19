@@ -519,6 +519,7 @@ MonoBehaviour:
   jumpButton: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   fallingConstant: 3
   jumpSpeed: 3
+  audio: {fileID: 0}
 --- !u!4 &3653217322502116694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: 5bfe2659a43e48242a6633841745a502, type: 3}
