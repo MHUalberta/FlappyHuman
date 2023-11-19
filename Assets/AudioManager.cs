@@ -24,31 +24,4 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
-    // public AudioSource src;
-    // public AudioClip sfx1, sfx2, sfx3, music;
-
-    // public void Start()
-    // {
-    //     src.clip = sfx1;
-    //     src.Play();
-    // }
-
-    // public void Jump()
-    // {
-    //     src.clip = sfx2;
-    //     src.Play();
-    // }
-
-    // public void EnterHole()
-    // {
-    //     src.clip = sfx3;
-    //     src.Play();
-    // }
-
-    // private void Background()
-    // {
-    //     src.clip = music;
-    //     src.Play();
-    // }
-    
 }
