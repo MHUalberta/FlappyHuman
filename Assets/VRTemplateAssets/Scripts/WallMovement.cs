@@ -1,3 +1,6 @@
+// 2023-11-19 AI-Tag 
+// This was created with assistance from Muse, a Unity Artificial Intelligence product
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,21 +12,29 @@ public class WallMovement : MonoBehaviour
 
     private Vector3[] waypoints;
     private int currentWaypointIndex;
-
+    
     void Start()
     {
         // Define waypoints around the perimeter of the square
         waypoints = new Vector3[]
         {
-            new Vector3(squareSize / 2f, squareSize / 2f, 0f),
-            new Vector3(squareSize / 2f, -squareSize / 2f, 0f),
-            new Vector3(-squareSize / 2f, -squareSize / 2f, 0f),
-            new Vector3(-squareSize / 2f, squareSize / 2f, 0f)
+            transform.position + new Vector3(0f, squareSize / 2f, squareSize / 2f),
+            transform.position + new Vector3(0f, squareSize / 2f, -squareSize / 2f),
+            transform.position + new Vector3(0f, -squareSize / 2f, -squareSize / 2f),
+            transform.position + new Vector3(0f, -squareSize / 2f, squareSize / 2f)
         };
 
-        // Set the initial position to the first waypoint
-        transform.position = waypoints[0];
-        currentWaypointIndex = 1;
+        // Start at the waypoint closest to the current position
+        float shortestDistance = Mathf.Infinity;
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            float distance = Vector3.Distance(transform.position, waypoints[i]);
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                currentWaypointIndex = i;
+            }
+        }
     }
 
     void Update()

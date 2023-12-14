@@ -8,9 +8,9 @@ public class Jump : MonoBehaviour
     [SerializeField] private InputActionReference jumpButton;
     [SerializeField] private float fallingConstant = 2.0f;
     [SerializeField] private float jumpSpeed = 0f;
+    [SerializeField] private AudioManager audio;
 
 
-    private float vertSpeed = 0f;
     private CharacterController _characterController;
     private Vector3 _playerVelocity;
 
@@ -23,6 +23,7 @@ public class Jump : MonoBehaviour
     private void Jumping(InputAction.CallbackContext obj)
     {
         _playerVelocity.y = jumpSpeed;
+        audio.PlaySFX(audio.jump);
     }
 
     private void Update()
